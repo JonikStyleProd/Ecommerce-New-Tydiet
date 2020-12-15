@@ -10,13 +10,18 @@ import store from './data/store';
 
 //Components
 import NavBar from './components/navbar/navbar.component';
+import Register from './screens/Register';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
     <NavBar />
+    <ToastContainer />
     <Switch>
       <Route exact path='/'component={App}/>
+      <Route exact path='/register'component={Register}/>
     </Switch>
     </BrowserRouter>
     <App />
